@@ -1,0 +1,111 @@
+Multi-Agent AI Research Assistant – Capstone Project
+
+Project Objective:\
+Develop a Multi-Agent AI Research Assistant that accepts a research question, delegates tasks to specialized AI agents, collects information, verifies evidence, and generates a structured research report with references.
+
+Technology Stack:\
+Python, LangGraph or CrewAI, Gemini API, LangChain, FastAPI, ChromaDB or FAISS, SQLite, PyPDF, python-docx, React or Streamlit, and Pytest.
+
+Project Modules and Agents:
+
+1\. Planner Agent
+
+- Accepts the user's research query.
+- Breaks the query into smaller tasks.
+- Creates a research execution plan.
+- Assigns tasks to appropriate agents.
+
+2\. Research Agent
+
+- Searches approved web sources.
+- Collects relevant information.
+- Extracts key findings and supporting evidence.
+- Stores source details for reference.
+
+3\. Knowledge Retrieval Agent
+
+- Processes PDF and DOCX documents.
+- Generates embeddings and stores them in a vector database.
+- Retrieves relevant document passages using RAG.
+- Provides contextual information to other agents.
+
+4\. Fact-Checker Agent
+
+- Validates claims against retrieved evidence.
+- Identifies contradictions and unsupported statements.
+- Checks whether sufficient evidence is available.
+- Requests additional research when necessary.
+
+5\. Report Writer Agent
+
+- Combines findings from all agents.
+- Generates an executive summary.
+- Creates detailed findings, comparisons, and conclusions.
+- Includes references and supporting evidence.
+- Produces a final report in Markdown or PDF format.
+
+Core Features:
+
+- Multi-agent collaboration and task delegation.
+- Natural language research queries.
+- Web search integration.
+- PDF and DOCX document upload.
+- Retrieval-Augmented Generation (RAG).
+- Vector database integration.
+- Evidence-based fact checking.
+- Automated report generation.
+- Source citations and research logs.
+- FastAPI endpoints.
+- Web-based user interface.
+- Error handling and workflow monitoring.
+
+Project Workflow:
+
+1. The user submits a research question.
+2. The Planner Agent creates a research plan.
+3. The Research Agent gathers information from web sources.
+4. The Knowledge Retrieval Agent searches uploaded documents.
+5. The Fact-Checker Agent evaluates the collected evidence.
+6. If evidence is insufficient, the system requests additional research within a defined retry limit.
+7. The Report Writer Agent generates the final report.
+8. The application displays the report and allows the user to download it.
+
+Implementation Plan:
+
+Day 1: Requirements analysis, architecture design, and project setup.
+
+Day 2: Configure the LLM API and implement individual agents.
+
+Day 3: Develop the Planner Agent and task delegation workflow.
+
+Day 4: Integrate web search and research tools.
+
+Day 5: Implement document processing, embeddings, and RAG.
+
+Day 6: Develop fact-checking and evidence validation.
+
+Day 7: Implement report generation and source citations.
+
+Day 8: Develop FastAPI endpoints and the frontend interface.
+
+Day 9: Perform unit testing, integration testing, and error handling.
+
+Day 10: Deploy the application, prepare documentation, and demonstrate the project.
+
+Expected Deliverables:
+
+- Complete Python source code.
+- Multi-agent architecture diagram.
+- FastAPI backend.
+- RAG pipeline and vector database integration.
+- Frontend dashboard.
+- Requirements file and environment configuration template.
+- Unit and integration tests.
+- README with installation and execution instructions.
+- Final project report and demonstration.
+
+Expected Outcome:
+
+A functional AI research application in which multiple specialized agents collaborate to research a topic, retrieve relevant documents, verify evidence, and generate a structured report with references.
+
+Recommended Framework: LangGraph for stateful workflows, conditional routing, retries, and human approval, or CrewAI for role-based agents and task delegation.
